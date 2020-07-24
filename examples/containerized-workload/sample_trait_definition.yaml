@@ -1,0 +1,16 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: TraitDefinition
+metadata:
+  name: manualscalertraits.core.oam.dev
+spec:
+  workloadRefPath: spec.workloadRef
+  definitionRef:
+    name: manualscalertraits.core.oam.dev
+---
+apiVersion: core.oam.dev/v1alpha2
+kind: TraitDefinition
+metadata:
+  name: serviceexposes.core.oam.dev
+spec:
+  definitionRef:
+    name: serviceexposes.core.oam.dev
