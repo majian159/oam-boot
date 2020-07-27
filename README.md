@@ -18,11 +18,12 @@ helm repo add crossplane-master https://charts.crossplane.io/master/
 ```
 
 3. Install Crossplane
+> Eventually oam-kubernetes-runtime will be self-contained, and crossplane is no longer needed. However, if crossplane is not installed in the current version, third-party controllers will not work properly.
 ```sh
 helm install crossplane --namespace oam-system crossplane-master/crossplane --version 0.12.0
 ```
 
-4. Install OAM Runtime Controller
+1. Install OAM Runtime Controller
 ```sh
 helm install oam --namespace oam-system crossplane-master/oam-kubernetes-runtime --devel
 ```
